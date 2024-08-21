@@ -1,7 +1,12 @@
 name: Android build
 
 # this is greatly inspired by skyline ci build file
-on: [push]
+on:
+  push:
+    tags:
+      - '*'
+      
+  workflow_dispatch:
 
 jobs:
   build:
